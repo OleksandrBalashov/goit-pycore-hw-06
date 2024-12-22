@@ -35,10 +35,9 @@ class Record:
                 break
 
     def edit_phone(self, old_phone, new_phone):
-        for p in self.phones:
+        for i, p in enumerate(self.phones):
             if p.value == old_phone:
-                self.phones.remove(p)
-                self.phones.append(Phone(new_phone))
+                self.phones[i] = Phone(new_phone)
                 break
 
     def find_phone(self, phone):
